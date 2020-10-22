@@ -7,6 +7,7 @@
 //! testing purposes.
 //!
 //! ```rust
+//! #[cfg(feature = "builder")]{
 //! use lettre::{Message, Transport};
 //! use lettre::transport::stub::StubTransport;
 //!
@@ -21,6 +22,7 @@
 //! let mut sender = StubTransport::new_ok();
 //! let result = sender.send(&email);
 //! assert!(result.is_ok());
+//! };
 //! ```
 
 use crate::address::Envelope;
