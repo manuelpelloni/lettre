@@ -235,7 +235,7 @@ impl Certificate {
             #[cfg(feature = "native-tls")]
             native_tls: native_tls_cert,
             #[cfg(feature = "rustls-tls")]
-            rustls: vec![rustls::Certificate(der)],
+            rustls: vec![rustls::Certificate(_der)],
         })
     }
 
@@ -250,7 +250,7 @@ impl Certificate {
             use rustls::internal::pemfile;
             use std::io::Cursor;
 
-            let mut pem = Cursor::new(pem);
+            let mut pem = Cursor::new(_pem);
             pemfile::certs(&mut pem).map_err(|_| Error::InvalidCertificate)?
         };
 
