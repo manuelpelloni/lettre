@@ -101,7 +101,7 @@ rustdoc-args = ["--cfg", "docsrs"]
 
 [[example]]
 name = "smtp"
-required-features = ["smtp-transport"]
+required-features = ["smtp-transport", "builder"]
 
 [[example]]
 name = "smtp_tls"
